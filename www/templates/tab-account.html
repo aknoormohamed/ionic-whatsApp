@@ -1,0 +1,17 @@
+<ion-view view-title="WhatsApp">
+    <ion-nav-buttons side="right">
+        <button style="color:white" class="button button-icon icon ion-android-search"></button>
+        <button style="color:white" class="button button-icon icon ion-android-person-add"></button>
+        <button style="color:white" class="button button-icon icon ion-android-more-vertical"></button>
+    </ion-nav-buttons>
+    <ion-content on-swipe-right="goBack()" on-swipe-left="goForward()">
+        <ion-list>
+            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in contacts" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+                <img ng-src="{{chat.face}}">
+                <h2>{{chat.displayName}}</h2>
+                <p>{{chat.phoneNumbers}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
